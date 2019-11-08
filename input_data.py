@@ -78,13 +78,14 @@ def read_data_sets(train_dir, fake_data=False, one_hot=False):
         data_sets.validation = DataSet([], [], fake_data=True)
         data_sets.test = DataSet([], [], fake_data=True)
         return data_sets
-    VALIDATION_SIZE = 50
+    VALIDATION_SIZE = 100
     list = os.listdir("./edge")
     aaa=[]
     for name in list:
         img = cv2.imread("./edge/"+name)
         arr=numpy.asarray(cv2.cvtColor(img, cv2.COLOR_BGR2GRAY))
         data = arr.reshape(28, 28, 1)
+        data=numpy.nan_to_num(data)
         aaa.append(data)
     size=len(aaa)
     train_images = numpy.asarray(aaa)
