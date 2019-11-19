@@ -1,0 +1,3 @@
+model_checkpoint_path: "D:\\PhaseDiagramAutoEncoder/training/train-4999"
+all_model_checkpoint_paths: "D:\\PhaseDiagramAutoEncoder/training/train-4998"
+all_model_checkpoint_paths: "D:\\PhaseDiagramAutoEncoder/training/train-4999"
