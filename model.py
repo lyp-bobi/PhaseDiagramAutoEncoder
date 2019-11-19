@@ -3,7 +3,7 @@ import numpy as np
 import input_data
 import matplotlib.pyplot as plt
 import os
-from scipy.misc import imsave as ims
+from imageio import imwrite as ims
 from utils import *
 from ops import *
 

@@ -42,8 +42,8 @@ for i in range(datanum):
         ero = cv2.GaussianBlur(ero, (5, 5), 0)
         ero = cv2.dilate(ero, kernel=cv2.getStructuringElement(cv2.MORPH_CROSS, (5, 5)))
         ero = cv2.GaussianBlur(ero, (5, 5), 0)
-        # edgeplot=edge(ero)
-        edgeplot=ero
+        edgeplot=edge(ero)
+        #edgeplot=ero
         kernel = np.ones((5, 5), np.uint8)
         dilation = cv2.dilate(edgeplot, kernel, iterations=10)
         small=cv2.resize(dilation,(28,28))
